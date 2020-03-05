@@ -3,3 +3,12 @@
 @import 'typography';
 @import 'reset';
 @import 'base';
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: $background;
+}
