@@ -1,5 +1,4 @@
 import VueRouter from "vue-router";
-import base from "../components/base.vue"
 import store from "../store";
 
 function getComponents(slug, next) {
