@@ -1,6 +1,6 @@
 # Vue Shop very very (very) simple app ;)
 
-To run app You need Node.js and npm.
+To run app You need lastest LTS Node.js and npm.
 
 Running:
 

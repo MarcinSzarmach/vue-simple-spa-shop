@@ -100,6 +100,13 @@ let products = [{
   }
 ]
 
+const productsResp = {
+  component: "productsBox",
+  data: {
+    items: products
+  }
+}
+
 function getContent(req, res) {
   axios.get('http://localhost:8080/').then(response => {
     res.send(response.data)
@@ -107,6 +114,9 @@ function getContent(req, res) {
 }
 
 const APIs = {
+  "GET /api/getItemsBySlug/": (req, res) => {
+    res.json(productsResp);
+  },
   "GET /api/getItemsBySlug/about(.*)": (req, res) => {
     res.json({
       component: "contentBox",
@@ -149,12 +159,7 @@ const APIs = {
     });
   },
   "GET /api/getItemsBySlug/products": (req, res) => {
-    res.json({
-      component: "productsBox",
-      data: {
-        items: products
-      }
-    });
+    res.json(productsResp);
   },
   "GET /api/getItemsBySlug/:slugProd(.*)": (req, res) => {
     const {
